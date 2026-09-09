@@ -8,9 +8,9 @@ public class Game {
             if (p1.getScore() != bestOf && p2.getScore() != bestOf) {
                 IO.println("\n\nTurn " + turn);
                 turn++;
-                //Here we just say who is going to throw next
+                //Here we say who is going to throw next and the value of their throw
                 IO.println(p1.getFullName() + "s time to throw the dice");
-                //
+                //Throws the dice and sets it as an int
                 int p1Throw = Dice.throwDice();
 
                 IO.println(p1.getFullName() + " has thrown a total value of: " + p1Throw);
@@ -25,12 +25,12 @@ public class Game {
                 IO.readln("Press enter to continue\n");
                 //Compare the two throws from each player
                 if (p1Throw > p2Throw) {
-                    //This is ran if p1 has a higher totall throw than p2
+                    //This is run if p1 has a higher total throw than p2
                     p1.addToScore();
                     IO.println(p1.getFullName() + " has scored\n\n");
 
                 } else {
-                    // This is ran otherwise ^^
+                    // This is run otherwise ^^
                     p2.addToScore();
                     IO.println(p2.getFullName() + " has \n\n");
                 }
@@ -46,7 +46,7 @@ public class Game {
                 win = (p1.getFullName() + " Wins the game!!!");
                 game = false;
             }
-            // The following is ran if p2 has gotten the score needed to win
+            // The following is run if p2 has gotten the score needed to win
             else {
                 win = (p2.getFullName() + " Wins the game!!!!");
                 game = false;

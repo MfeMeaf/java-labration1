@@ -3,7 +3,6 @@ public class Player {
     private String lastName;
     private int score;
 
-
     // Player constructor
     public Player(String firstName, String lastName) {
         this.firstName = firstName;
@@ -11,18 +10,15 @@ public class Player {
         this.score = 0;
     }
 
-
     //Get score
     public int getScore() {
         return score;
     }
 
-
     //add to score
     public void addToScore() {
         this.score += 1;
     }
-
 
     // Print out name of player :)
     public String getFullName() {
